@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mark Whitby</title>
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,700" rel="stylesheet">
+	<style type="text/css">
+		html { box-sizing: border-box; }
+		*, *:before, *:after { box-sizing: inherit; }
+		
+		*{
+			transition: .5s all ease-in-out;
+		}
+		body{
+			font-family: 'IBM Plex Sans', sans-serif; 
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 1.5em;
+			color:#14080E;
+			background-color: #f9f9f9;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.container{
+			max-width: 1060px;
+			background: #fff;
+		}
+
+		header,nav,section{
+			padding: 1em 2em;
+		}
+	
+		header{
+			background-color: rgba(0, 53, 84, 1);
+			color: #fafafa;
+		}
+			header h1{
+				padding-top:.5em;
+				margin-top:0;
+			}
+			header a{
+				color: rgba(229, 75, 75, 1);
+				text-decoration: none;
+			}
+			header a:hover{
+				border-bottom: 1px solid;
+			}
+	
+	
+			
+		nav{
+			background-color:rgba(239,239,239,1);
+		}
+	
+			nav a{
+				text-decoration: none;
+				color: rgba(69, 123, 157, 1);
+				margin: 0 .5em;
+			}
+			nav a:first-child{
+				margin-left:0;
+			}
+			nav a:last-child{
+				margin-right: 0;
+			}
+			nav a:hover{
+				text-decoration: underline;
+			}
+	
+		
+		
+		h2{
+			color: rgba(0, 166, 251, 1);
+		}
+		
+		.job h3{
+			color: rgba(229, 75, 75, 1);
+			margin-bottom: .25em;
+		}
+			
+			div[itemtype="http://schema.org/Organization"]{
+				font-weight: 300;
+				font-style: italic;
+			}
+			
+			
+		#education a{
+			color: rgba(42, 43, 42, 1);
+		}
+			#education h3{
+				margin-bottom:3px;
+			}
+			
+			
+		a[target="_blank"]:after{
+			content:'';
+			display: inline-block;
+			background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41zM17 14a1 1 0 0 1 2 0v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h5a1 1 0 0 1 0 2H5v12h12v-5z"/></svg>');
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 1em;
+			width: 1em;
+			margin-left: .25em;
+		}	
+
+			
+		abbr{
+			text-decoration: none;
+			border-bottom: 1px dotted;
+		}
+			abbr:hover{
+				cursor: help;
+		}
+	
+		.note{
+			font-size:.8em;
+		}
+			.note:before {
+				content:'\0028';
+			}
+			.note:after {
+				content:'\0029';
+			}
+				
+		.techlist p{
+			font-weight: 700;
+			font-style: italic;
+			margin-bottom: .25em;
+		}
+			.techlist ul{
+				margin-top: .25em;
+			}
+	
+		#skills ul{
+			column-count:2;
+			list-style: none;
+		}
+		
+		span[itemprop="streetAddress"]{
+			display: block;
+		}
+		
+		#education a{
+			display: flex;
+		  flex: 1 auto;
+		  flex-flow: row nowrap;
+		  align-items: center;
+		}
+		
+		#education img[itemprop="logo"]{
+			max-width: 50px;
+		}
+		#awardsConferences a{
+			color: rgba(229, 75, 75, 1);
+			text-decoration: none;
+		}
+			#awardsConferences a:hover{
+				border-bottom: 1px solid;
+			}
+	
+	
+		@media print {
+			
+			body *{
+				color:#14080E;
+				background-color: transparent;
+			}
+			nav{
+				display: none;
+			}
+			header, header a{
+				background-color: transparent;
+				color:#14080E;
+			}
+			.job h3{
+				color:#14080E;
+				background-color: transparent;
+			}
+			#education img{
+				display: none;
+			}
+		}
+		
+		@media only screen and (min-width: 1060px) {
+			.container{
+				margin: 2em auto 3em auto;
+				box-shadow: 2px 2px 15px rgba(0,0,0,0.1);
+  		}
+		}
+
+	</style>
+
+</head>
+<body itemscope itemtype="http://schema.org/Person">
+<div class="container">
+<!-- PERSONAL DETAILS -->
+	<header>
+		<h1 itemprop="name"><span itemprop="givenName">Mark</span> <span itemprop="familyName">Whitby</span></h1>
+		<div class="contactDetails">
+			<a href="mailto:markwhitby45@gmail.com" itemprop="email">MarkWhitby45@gmail.com</a>
+			<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      	<span itemprop="addressLocality">Nashville</span>, <span itemprop="addressRegion">TN</span>
+    	</div>
+		</div>
+	</header>
+
+	<nav>
+		<a href="#professionalExperience">Professional Experience</a>
+		<a href="#education">Education</a>
+		<a href="#background">Tech Background</a>
+		<a href="#awardsConferences">Awards</a>
+		<a href="#areasOfInterest">Areas of Interest</a>
+	</nav>
+
+
+
+<!-- PROFESSIONAL EXPERIENCE -->	
+	<section id="professionalExperience">
+		<h2>Professional Experience</h2>
+
+		<!-- Currently Employed @ -->
+		<div class="job">
+			<h3 itemprop="jobTitle">Web Developer</h3>
+			<div class="employmentData" itemprop="worksFor">
+				<div itemscope itemtype="http://schema.org/Organization">
+			  	<span itemprop="name">DVL Seigenthaler</span> <span>2015-Current</span>
+			  	<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+			      <span itemprop="streetAddress">700 12th Ave S.</span> 
+			      <span itemprop="addressLocality">Nashville</span>, 
+			      <span itemprop="addressRegion">TN</span> 
+			      <span itemprop="postalCode">37203</span>
+			    </div>
+			  </div>
+			</div>
+			<div class="jobSummary">
+				<p>Developing accessible standards compliant websites and internal applications using 3<sup>rd</sup> party <abbr title="Application Programming Interface">API</abbr>s for clients within a wide range of industries including Automotive, Consumer Goods, Energy, Food &amp; Beverage, Health Care, and Manufacturing. Sites vary between clients but each is developed using current best practices and responsive design to ensure maximum access.</p>
+				
+				<div class="techlist">
+					<p>Tech List</p>
+					<ul>
+						<li>CMS's: Wordpress, ExpressionEngine, Craft</li>
+						<li>Build Tools/Task Runner: Gulp, SASS, Babel</li>
+						<li>ES6, jQuery</li>
+						<li>Upcoming Projects: AWS ElasticSearch, ReactJS </li>
+					</ul>
+				</div>
+
+			</div>
+		</div><!-- end job -->
+
+
+
+		<!-- Previous Employment -->
+		<div class="job">
+			<h3 itemprop="jobTitle">Web Developer</h3>
+			<div class="employmentData">
+				<div itemscope itemtype="http://schema.org/Organization">
+			  	<span itemprop="name">COLE Publishing</span> <span>2011-2013</span>
+			  	<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+			      <span itemprop="streetAddress">1720 Maple Lake Dam Rd.</span> 
+			      <span itemprop="addressLocality">Three Lakes</span>, 
+			      <span itemprop="addressRegion">WI</span> 
+			      <span itemprop="postalCode">54562</span>
+			    </div>
+			  </div>
+			</div>
+			<div class="jobSummary">
+				
+				<h4>Article Management System</h4>
+					<p>This system provides role based access for sales associates, copy editors/proofers, graphic designers, and photographers to manage all of the resources needed to produce 8 monthly magazines. To achieve this I interviewed employees and collaborated with management to solidify a standard means of production. This included the work flow of articles up and down the approval hierarchy, specific requirements of each user group, and the timing for each stage of the production cycle.</p>
+					<p>The project requirement discovery phase led to finding unequal work loads &amp; scheduling issues that were previously unknown.
+					<p>Training was provided to staff prior to release and after about 4 weeks of feature additions and 1 on 1 training.
+				<h4>Response Re-design</h4>
+				<p>Using traffic analysis, interviews with customer service representatives, and a content inventory, I was able to identify unsatisfied user needs and develop a new structure to the previous information architecture.</p>
+				<p>Working with a designer to create the overall structure, the layout was taken from the designer and crafted with responsive features to allow growth with the verified increase in mobile usage.</p>
+				
+				<div class="techlist">
+					<p>Tech List</p>
+					<ul>
+						<li>ExpressionEngine</li>
+						<li>SVG</li>
+						<li>jQuery</li>
+					</ul>
+				</div>
+				
+			</div>
+		</div><!-- end job -->
+
+		<div class="job">
+			<h3 itemprop="jobTitle">Web Developer</h3>
+			<div class="employmentData">
+				<div itemscope itemtype="http://schema.org/Organization">
+			  	<span itemprop="name">Volunteer State Community College</span> <span>2008-2011</span>
+			  	<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+			      <span itemprop="streetAddress">1480 Nashville Pike</span> 
+			      <span itemprop="addressLocality">Gallatin</span>, 
+			      <span itemprop="addressRegion">TN</span> 
+			      <span itemprop="postalCode">37066</span>
+			    </div>
+			  </div>
+			</div>
+			<div class="jobSummary">
+				<p>Worked on various online projects including main website redesign, a federally funded micro-site for health care programs, and various smaller applications. </p>
+			
+				<h4>Daily Operations:</h4>
+				<ul>
+					<li>Content updates</li>
+					<li>Forms &amp; form processors</li>
+					<li>Photo editing</li>
+					<li>Video additions</li>
+				</ul>
+				<h4>Projects:</h4>
+				<ul>
+					<li>HTML5 Template – Removed more than 200Mb of static non-semantic markup &amp; applied new dynamic HTML5 structure.</li>
+					<li>Room finder – Application designed to apply SVG highlighting of a room over a building floor plan based on user selection to aid students in finding campus locations.</li>
+					<li>People Finder – Using PHP and LDAP this application searches the campus Active Directory server for department &amp; employee contact information.</li>
+				</ul>
+				
+				<div class="techlist">
+					<p>Tech List</p>
+					<ul>
+						<li>CMS's: Wordpress</li>
+						<li>Custom PHP</li>
+						<li>jQuery</li>
+						<li>SVG</li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- end job -->
+
+
+
+	</section><!-- END PROFESSIONAL EXPERIENCE -->
+
+
+
+
+
+<!-- EDUCATION -->
+	<section id="education">
+		<h2>Education</h2>
+		
+		<div itemprop="alumniOf">
+			<h3>Bachelor of Science, Computer Information Technology</h3>
+			<p>Graduated 2007</p>
+			<div itemscope itemtype="http://schema.org/EducationalOrganization">
+				<a href="http://wku.edu" itemprop="url"><span itemprop="name">Western Kentucky University</span></a>
+				<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<span itemprop="streetAddress">1906 College Heights Blvd</span>
+					<span itemprop="addressLocality">Bowling Green</span>,
+					<span itemprop="addressRegion">KY</span> <span itemprop="postalCode">42101</span>
+				</div>
+			</div>
+		</div>
+		
+		<div itemprop="alumniOf">
+			<h3>Associate of Applied Science, Computer Information Systems</h3>
+			<p>Graduated 2007</p>
+			<div itemscope itemtype="http://schema.org/EducationalOrganization">
+				<a href="http://volstate.edu/" itemprop="url"><span itemprop="name">Volunteer State Community College</span></a>
+				<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<span itemprop="streetAddress">1480 Nashville Pike</span>
+					<span itemprop="addressLocality">Gallatin</span>,
+					<span itemprop="addressRegion">TN</span> <span itemprop="postalCode">37066</span>
+				</div>
+			</div>
+		</div>
+	</section><!-- end of education -->
+
+
+
+<section id="skillsInterests">
+
+<!-- SKILLS -->
+	<div itemscope itemtype="http://schema.org/ItemList" id="background">
+		<h2 itemprop="name">Tech Background List</h2>
+		<ul>
+			<li itemprop="itemListElement"><abbr title="Hypertext Markup Language">HTML5</abbr></li>
+			<li itemprop="itemListElement"><abbr title="Cascading Style Sheets">SASS, Flex, gearing up for Grid</abbr></li>
+			<li itemprop="itemListElement"><abbr title="Scalable Vector Graphics">SVG</abbr></li>
+
+			<li itemprop="itemListElement">ExpressionEngine</li>
+			<li itemprop="itemListElement">Craft</li>
+			<li itemprop="itemListElement">WordPress <span class="note">ACF, CPT</span></li>
+
+			<li itemprop="itemListElement">Javascript<span class="note">ES6 &amp; jQuery</span></li>
+			<li itemprop="itemListElement"><abbr title="Hypertext Pre Processor">PHP</abbr></li>
+			<li itemprop="itemListElement">MySQL/MariaDB</li>
+
+			<li itemprop="itemListElement">Illustrator</li>
+			<li itemprop="itemListElement">Photoshop</li>
+		</ul>
+		<p>Tooling</p>
+		<ul>
+			<li itemprop="itemListElement">Sublime Text/VS Code</li>
+			<li itemprop="itemListElement">Gulp, SASS, Babel</li>
+			<li itemprop="itemListElement">Wordpress</li>
+		</ul>
+	</div>
+
+<!-- CONFERENCES AND AWARDS -->
+	<div id="awardsConferences">
+		<h2>Awards and Conferences</h2>
+		<ul itemscope itemtype="http://schema.org/ItemList">
+			<li itemprop="itemListElement"><a href="https://aneventapart.com/event/nashville-2016" target="_blank">An Event Apart 2016 Nashville</a></li>
+			<li itemprop="itemListElement"><a href="https://www.w3award.com/winners/list/view/?search=DVL&event=1015&award=2" target="_blank">2017 W3 Silver Award</a></li>
+			<li itemprop="itemListElement"><a href="https://webaim.org/" target="_blank">2017 WebAIM Web Accessibility Conference Logan Utah</a></li>
+		</ul>
+	</div>
+
+
+<!-- INTERESTS -->
+	<div id="areasOfInterest">
+		<h2>Areas of Interest/Study</h2>
+
+		<div itemscope itemtype="http://schema.org/ItemList" id="workInterests">
+		  <h3 itemprop="name">Work Interests</h3>
+		  <ul>
+				<li itemprop="itemListElement">Javascript <span class="note">ECMAscript</span></li>
+				<li itemprop="itemListElement">ReactJS</li>
+			  <li itemprop="itemListElement">AWS Services: ElasticSearch, Lambda, Lightsail</li>
+			  <li itemprop="itemListElement">Web Accessibility <span class="note"><abbr title="Accesible Rich Internet Application">ARIA</abbr> &amp;<abbr title="Web Content Accesibility Guidelines">WCAG</abbr> 2.0</span></li>
+			  <li itemprop="itemListElement">Functional Programming</li>
+			  
+			</ul>
+		</div>
+
+		<div itemscope itemtype="http://schema.org/ItemList" id="pleasure">
+		  <h3 itemprop="name">Personal Interests</h3>
+		  <ul>
+			  <li itemprop="itemListElement">Gardening</li>
+			  <li itemprop="itemListElement">Wood Working</li>
+			  <li itemprop="itemListElement">General <abbr title="do it yourself">DIY</abbr> &amp; Garage Tinkering</li>
+		  </ul>
+		</div>	
+
+	</div>
+
+</section><!-- end of skills -->
+
+</div><!-- end container -->
+</body>
+</html>
